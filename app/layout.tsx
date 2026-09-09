@@ -16,8 +16,8 @@ const bodyFont = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Ryan Summers — Author & Observer',
-  description: 'The official portfolio of author Ryan Summers: fiction, essays, poetry, and stories for the in-between.',
+  title: 'Hello world',
+  description: 'Hello world',
   generator: 'v0.app',
 }
 
