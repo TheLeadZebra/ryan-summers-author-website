@@ -1,5 +1,3 @@
-import { Analytics } from '@vercel/analytics/next'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
@@ -35,8 +33,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className="bg-background">
       <body className={`${displayFont.variable} ${bodyFont.variable} antialiased`}>
         {children}
-        {process.env.NODE_ENV === 'production' && <Analytics />}
-        {process.env.NODE_ENV === 'production' && <SpeedInsights />}
+
       </body>
     </html>
   )
