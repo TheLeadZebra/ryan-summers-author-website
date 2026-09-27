@@ -7,7 +7,7 @@
   --font-sans: var(--font-body), 'DM Sans', sans-serif; --font-serif: var(--font-display), 'Cormorant Garamond', Georgia, serif;
 }
 
-:root { color-scheme: dark; --background: #403c49; --foreground: #f6f1ed; --muted: #514b5a; --muted-foreground: #c7bdc8; --border: #625b6b; --ring: #e49a25; --accent: #e49a25; --paper: #4a4554; --ink: #282530; --radius: 0.15rem; }
+:root { color-scheme: dark; --background: #1D1022; --foreground: #FAA21A; --muted: #514b5a; --muted-foreground: #c7bdc8; --border: #625b6b; --ring: #e49a25; --accent: #e49a25; --paper: #4a4554; --ink: #282530; --radius: 0.15rem; }
 * { box-sizing: border-box; border-color: var(--border); }
 html { scroll-behavior: smooth; background: var(--background); }
 body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); font-size: 15px; line-height: 1.6; }
