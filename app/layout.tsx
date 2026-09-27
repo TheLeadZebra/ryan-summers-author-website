@@ -16,14 +16,14 @@ const bodyFont = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Hello world',
-  description: 'Hello world',
+  title: 'Website coming soon',
+  description: 'Website coming soon',
   generator: 'v0.app',
 }
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#403c49',
+  themeColor: '#1D1022',
   width: 'device-width',
   initialScale: 1,
 }
