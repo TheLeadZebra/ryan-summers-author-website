@@ -25,7 +25,6 @@
 * {
     font-family: 'EBGaramond';
     color: white;
-    font-weight: 100;
     letter-spacing: 5%;
 }
 
@@ -40,6 +39,12 @@ h1 {
     font-size: 3rem;
 }
 
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
 .small {
     font-size: 2rem;
     vertical-align: 10%;
@@ -51,40 +56,53 @@ h1 {
 
 #book {
     background-color: #684063;
-    margin: 0 50px;
+    margin: 0 60px;
     padding: 20px 0;
 }
 
-#blurb-and-book{
+.blurb-and-book{
     background-color: #684063;
-    display: flex;
-    grid-template-columns: 2;
+    font-size: large;
 }
 
 .blurb {
-    display: block;
-    margin: 0 40% 0 5%
+    text-align: center;
+    padding: 20px 40px;
+}
+
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #faa21a;
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.bold-p {
+    font-weight: bold;
+}
+
+.book-cover {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px 0px 20px;
 }
 
 .book-image{
-    max-width: 450px;
+    width: 200px;
     height: auto;
-    display: block;
-    /* margin: 0 10% 1rem auto; */
-    /* border: 10px;
-    border-color: #684063;
-    border-style: solid; */
 }
 
 #author {
     background-color: #bf7957;
-    margin: 0 50px;
-    padding: 20px 20%;
+    margin: 0 60px;
+    padding: 20px 100px;
 }
 
 .author-text {
     text-align: center;
     font-size: xx-large;
+    padding-bottom: 50px;
 }
 
 /* Navigation Bar */
@@ -97,7 +115,7 @@ h1 {
     background-color: var(--menu-bg-colour);
     padding-top: 80px;
     z-index: 999;
-
+    
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease-in-out;
@@ -108,16 +126,39 @@ h1 {
     visibility: visible;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 976px) {
     #nav-bar {
         width: var(--nav-bar-width);
-
         transform: translateX(calc(-1*var(--nav-bar-width)));
     }
-
+    
     #nav-bar.open {
         transform: translateX(0);
     }
+    
+    .blurb-and-book{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    
+    .blurb {
+        flex: 1;
+        align-self: center;
+        padding-right: 10px;
+        padding-left: 80px;
+    }
+
+    .book-cover {
+        flex: 0 0 300px;
+        padding: 0 5vw;
+        margin-bottom: 40px
+    }
+
+    .book-image {
+    width: 400px;
+    height: auto;
+}
 }
 
 #nav-bar ul {
