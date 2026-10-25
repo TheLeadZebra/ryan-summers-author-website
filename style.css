@@ -86,16 +86,29 @@ h2 {
     font-weight: bold;
 }
 
+.order-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
 .order {
-    display: inline-block;
+    flex: 1 1 263px;
+
+    max-width: 400px;
+
+    box-sizing: border-box;
+
     align-self: start;
     -webkit-tap-highlight-color: transparent;
     text-decoration: none;
     background-color: #faa21a60;
-    border:none;
+    border: none;
     border-radius: 1.2rem;
-    font-size: clamp(1rem, 1vw + 0.8rem, 4rem);
-    margin: 10px 30px;
+    font-size: clamp(1.5rem, 1vw + 0.8rem, 4rem);
+    margin: 10px 40px;
     padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2.5vw, 2rem);
     transition: background-color 0.5s ease;
 }
@@ -103,11 +116,6 @@ h2 {
 .order:active {
     background-color: #faa21aC4 !important;
     transform: scale(0.95);
-}
-
-.order-buttons {
-    text-align: center;
-    padding: 20px 20px;
 }
 
 .book-cover {
@@ -132,6 +140,69 @@ h2 {
     text-align: center;
     font-size: large;
     padding-bottom: 30px;
+}
+
+#follow {
+    margin: 0 0px;
+    padding: 30px;
+}
+
+.follow-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.follow-button {
+    background-color: #faa21a60;
+    border-radius: 50%;
+
+    -webkit-tap-highlight-color: transparent;
+
+    font-size: clamp(3rem, 5vw, 100px);
+    margin: 0.6rem 2.5rem;
+    padding:clamp(1rem, 2.5vw, 2rem);
+
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    
+}
+
+.follow-button:active {
+    background-color: #faa21a !important;
+    transform: scale(0.95);
+}
+
+@media (hover: hover) {
+    #nav-bar a:hover {
+    background-color: #faa21a70;
+    }
+
+    .order:hover {
+        background-color: #faa21aEE;
+        cursor: pointer;
+    }
+
+    #menu-toggle:hover {
+        background-color: color-mix(in srgb, var(--accent-colour) 15%, transparent);
+    }
+
+    .follow-button:hover {
+        background-color: #faa21a;
+        transform: scale(1.05);
+    }
+
+}
+
+.site-tag {
+    text-align: center;
+    padding: 5px 0px;
 }
 
 /* Navigation Bar */
@@ -178,8 +249,6 @@ h2 {
 #nav-bar a:active {
     background-color: #faa21a70 !important;
 }
-
-
 
 #menu-toggle {
     position: fixed;
@@ -240,65 +309,7 @@ h2 {
     transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
-#follow {
-    margin: 0 0px;
-    padding: 30px;
-}
-
-.follow-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    gap: 0.5rem;
-}
-
-.follow-button {
-    background-color: #faa21a60;
-    border-radius: 50%;
-
-    -webkit-tap-highlight-color: transparent;
-
-    font-size: clamp(1.5rem, 5vw, 100px);
-    margin: 0.6rem 1.5rem;
-    padding:clamp(1rem, 2.5vw, 2rem);
-
-    transition: background-color 0.5s ease, transform 0.3s ease;
-    
-}
-
-.follow-button:active {
-    background-color: #faa21a !important;
-    transform: scale(0.95);
-}
-
-@media (hover: hover) {
-    #nav-bar a:hover {
-    background-color: #faa21a70;
-    }
-
-    .order:hover {
-        background-color: #faa21aEE;
-        cursor: pointer;
-    }
-
-    #menu-toggle:hover {
-        background-color: color-mix(in srgb, var(--accent-colour) 15%, transparent);
-    }
-
-    .follow-button:hover {
-        background-color: #faa21a;
-        transform: scale(1.05);
-    }
-
-}
-
-.site-tag {
-    text-align: center;
-    padding: 5px 0px;
-}
-
-@media (min-width: 976px) {
+@media (min-width: 1625px) {
     #nav-bar {
         width: var(--nav-bar-width);
         transform: translateX(calc(-1*var(--nav-bar-width)));
@@ -327,17 +338,17 @@ h2 {
     }
 
     .blurb {
-        padding: 0 0 20px 20px;
-    }
-
-    .order {
-        font-size: clamp(1rem, 1vw + 0.5rem, 4rem);
-        margin: 10px 30px;
-        padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2.5vw, 2rem);
+        padding: 0 0 20px 0px;
     }
 
     .order-buttons {
-        padding: 0 0 20px 20px;
+        padding: 0 0 20px 0px;
+    }
+
+    .order {
+        flex: 1 1 305px;
+        font-size: clamp(1rem, 1vw + 0.5rem, 4rem);
+        padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2.5vw, 2rem);
     }
 
     .book-cover {
