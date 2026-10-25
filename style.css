@@ -254,6 +254,11 @@ h2 {
     transition: background-color 0.5s ease;
 }
 
+#menu-toggle:active {
+    background-color: #faa21a70;
+    transform: scale(0.97);
+}
+
 #menu-toggle.open .bar:nth-child(1){
     transform: translateY(10px) rotate(45deg);
 }
@@ -288,8 +293,7 @@ h2 {
 
 @media (hover: hover) {
     #nav-bar a:hover {
-        color: var(--accent-colour);
-        background-color: color-mix(in srgb, var(--accent-colour) 10%, transparent)
+    background-color: #faa21a70;
 }
 
 .order:hover {
