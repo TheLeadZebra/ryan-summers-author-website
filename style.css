@@ -76,7 +76,7 @@ h2 {
 .divider {
     border: none;
     height: 2px;
-    background-color: #faa21a;
+    background-color: #faa21aEE;
     
     width: 100%;
     margin: 2rem auto;
@@ -318,12 +318,19 @@ h2 {
     background-color: #faa21a60;
     border-radius: 50%;
 
+    -webkit-tap-highlight-color: transparent;
+
     font-size: clamp(1.5rem, 5vw, 100px);
     margin: 0.6rem 1.5rem;
     padding:clamp(1rem, 2.5vw, 2rem);
 
     transition: background-color 0.5s ease, transform 0.3s ease;
     
+}
+
+.follow-button:active {
+    background-color: #faa21a !important;
+    transform: scale(0.95);
 }
 
 @media (hover: hover) {
