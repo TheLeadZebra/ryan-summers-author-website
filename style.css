@@ -99,9 +99,9 @@ h2 {
     transition: background-color 0.5s ease;
 }
 
-.order:hover {
+.order:active {
     background-color: #faa21aC4;
-    cursor: pointer;
+    transform: scale(0.98);
 }
 
 .order-buttons {
@@ -168,11 +168,6 @@ h2 {
 
     font-size: 1.1rem;
 
-}
-
-#nav-bar a:hover {
-    color: var(--accent-colour);
-    background-color: color-mix(in srgb, var(--accent-colour) 10%, transparent)
 }
 
 @media (min-width: 976px) {
@@ -266,10 +261,6 @@ h2 {
     transform: translateY(-10px) rotate(-45deg);
 }
 
-#menu-toggle:hover {
-    background-color: color-mix(in srgb, var(--accent-colour) 15%, transparent);
-}
-
 .bar {
     display: block;
     width: 100%;
@@ -290,4 +281,21 @@ h2 {
     pointer-events: none;
 
     transition: transform 0.3s ease, opacity 0.2s ease;
+}
+
+@media (hover: hover) {
+    #nav-bar a:hover {
+        color: var(--accent-colour);
+        background-color: color-mix(in srgb, var(--accent-colour) 10%, transparent)
+}
+
+.order:hover {
+    background-color: #faa21aC4;
+    cursor: pointer;
+}
+
+#menu-toggle:hover {
+    background-color: color-mix(in srgb, var(--accent-colour) 15%, transparent);
+}
+
 }
