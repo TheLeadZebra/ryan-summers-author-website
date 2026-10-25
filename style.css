@@ -179,68 +179,7 @@ h2 {
     background-color: #faa21a70 !important;
 }
 
-@media (min-width: 976px) {
-    #nav-bar {
-        width: var(--nav-bar-width);
-        transform: translateX(calc(-1*var(--nav-bar-width)));
-    }
-    
-    #nav-bar.open {
-        transform: translateX(0);
-    }
 
-    #nav-bar a {
-        font-size: 1.5rem;
-        text-align: left;
-    }
-    
-    .blurb-and-book{
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-    }
-    
-    .text-and-buttons {
-        flex: 1;
-        align-self: center;
-        padding-right: 0px;
-        padding-left: 80px;
-    }
-
-    .blurb {
-        padding: 0 0 20px 20px;
-    }
-
-    .order {
-        font-size: clamp(1rem, 1vw + 0.5rem, 4rem);
-        margin: 10px 30px;
-        padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2.5vw, 2rem);
-    }
-
-    .order-buttons {
-        padding: 0 0 20px 20px;
-    }
-
-    .book-cover {
-        flex: 0 0 300px;
-        padding: 0 10vw;
-        margin-bottom: 40px;
-    }
-
-    .book-image {
-    width: 400px;
-    height: auto;
-    }
-
-    #author {
-    margin: 0 60px;
-    padding: 20px 80px 40px 80px;
-    }
-
-    .author-text {
-    font-size: x-large;
-    }
-}
 
 #menu-toggle {
     position: fixed;
@@ -352,4 +291,77 @@ h2 {
         transform: scale(1.05);
     }
 
+}
+
+.site-tag {
+    text-align: center;
+    padding: 5px 0px;
+}
+
+@media (min-width: 976px) {
+    #nav-bar {
+        width: var(--nav-bar-width);
+        transform: translateX(calc(-1*var(--nav-bar-width)));
+    }
+    
+    #nav-bar.open {
+        transform: translateX(0);
+    }
+
+    #nav-bar a {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+    
+    .blurb-and-book{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    
+    .text-and-buttons {
+        flex: 1;
+        align-self: center;
+        padding-right: 0px;
+        padding-left: 80px;
+    }
+
+    .blurb {
+        padding: 0 0 20px 20px;
+    }
+
+    .order {
+        font-size: clamp(1rem, 1vw + 0.5rem, 4rem);
+        margin: 10px 30px;
+        padding: clamp(0.5rem, 1.5vw, 0.75rem) clamp(1rem, 2.5vw, 2rem);
+    }
+
+    .order-buttons {
+        padding: 0 0 20px 20px;
+    }
+
+    .book-cover {
+        flex: 0 0 300px;
+        padding: 0 10vw;
+        margin-bottom: 40px;
+    }
+
+    .book-image {
+    width: 400px;
+    height: auto;
+    }
+
+    #author {
+    margin: 0 60px;
+    padding: 20px 80px 40px 80px;
+    }
+
+    .author-text {
+    font-size: x-large;
+    }
+
+    .site-tag {
+    text-align: right;
+    padding: 5px 20px;
+}
 }
