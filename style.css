@@ -102,7 +102,7 @@ h2 {
 
 .order:active {
     background-color: #faa21aC4 !important;
-    transform: scale(0.98);
+    transform: scale(0.95);
 }
 
 .order-buttons {
@@ -113,7 +113,7 @@ h2 {
 .book-cover {
     display: flex;
     justify-content: center;
-    padding: 0 20px 0px 20px;
+    padding: 20px 20px 0px 20px;
 }
 
 .book-image{
@@ -144,6 +144,8 @@ h2 {
     background-color:#684063;
     padding-top: 80px;
     z-index: 999;
+
+    border-right: 6px ridge #faa21a;
     
     opacity: 0;
     visibility: hidden;
@@ -163,12 +165,18 @@ h2 {
 
 #nav-bar a {
     text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
     color: inherit;
     display: block;
     padding: 12px 25px;
+    text-align: center;
 
-    font-size: 1.1rem;
+    font-size: 1.8rem;
 
+}
+
+#nav-bar a:active {
+    background-color: #faa21a70 !important;
 }
 
 @media (min-width: 976px) {
@@ -181,6 +189,10 @@ h2 {
         transform: translateX(0);
     }
 
+    #nav-bar a {
+        font-size: 1.5rem;
+        text-align: left;
+    }
     
     .blurb-and-book{
         display: flex;
@@ -193,7 +205,7 @@ h2 {
         align-self: center;
         padding-right: 0px;
         padding-left: 80px;
- }
+    }
 
     .blurb {
         padding: 0 0 20px 20px;
@@ -227,8 +239,7 @@ h2 {
 
     .author-text {
     font-size: x-large;
-    /* padding-bottom: 40px; */
-}
+    }
 }
 
 #menu-toggle {
@@ -256,7 +267,7 @@ h2 {
 
 #menu-toggle:active {
     background-color: #faa21a70;
-    transform: scale(0.97);
+    transform: scale(0.95);
 }
 
 #menu-toggle.open .bar:nth-child(1){
@@ -284,25 +295,54 @@ h2 {
     display: block;
     width: 100%;
     height: 1px;
-    background-color: white;
-    border-radius: 2px;
+    background-color:white;
     pointer-events: none;
 
     transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
+#follow {
+    margin: 0 0px;
+    padding: 30px;
+}
+
+.follow-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.follow-button {
+    background-color: #faa21a60;
+    border-radius: 50%;
+
+    font-size: clamp(1.5rem, 5vw, 100px);
+    margin: 0.6rem 1.5rem;
+    padding:clamp(1rem, 2.5vw, 2rem);
+
+    transition: background-color 0.5s ease, transform 0.3s ease;
+    
+}
+
 @media (hover: hover) {
     #nav-bar a:hover {
     background-color: #faa21a70;
-}
+    }
 
-.order:hover {
-    background-color: #faa21aC4;
-    cursor: pointer;
-}
+    .order:hover {
+        background-color: #faa21aEE;
+        cursor: pointer;
+    }
 
-#menu-toggle:hover {
-    background-color: color-mix(in srgb, var(--accent-colour) 15%, transparent);
-}
+    #menu-toggle:hover {
+        background-color: color-mix(in srgb, var(--accent-colour) 15%, transparent);
+    }
+
+    .follow-button:hover {
+        background-color: #faa21a;
+        transform: scale(1.05);
+    }
 
 }
