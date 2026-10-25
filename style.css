@@ -89,6 +89,7 @@ h2 {
 .order {
     display: inline-block;
     align-self: start;
+    -webkit-tap-highlight-color: transparent;
     text-decoration: none;
     background-color: #faa21a60;
     border:none;
@@ -100,7 +101,7 @@ h2 {
 }
 
 .order:active {
-    background-color: #faa21aC4;
+    background-color: #faa21aC4 !important;
     transform: scale(0.98);
 }
 
@@ -233,6 +234,8 @@ h2 {
 #menu-toggle {
     position: fixed;
     z-index: 1000;
+
+    -webkit-tap-highlight-color: transparent;
 
     display: flex;
     flex-direction: column;
